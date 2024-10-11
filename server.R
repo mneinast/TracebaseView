@@ -11,35 +11,46 @@ options(shiny.maxRequestSize = 60 * 1024 ^ 2)
 summaryColNames <- c(
     "Sample",
     "Tissue",
-    "Peak Group",
-    "Labeled Element",
+    "Peak Group", # name of compound in the peak annotation file
+    "Measured Compound(s)", # tracebace-unified primary name of compound
+    "Measured Compound Synonym(s)", # synonyms for this compound in tracebase
+    "Formula",
+    "Peak Annotation Filename", # accucor, iso-autocorr, etc
+    "Labeled Element:Count", # PeakData
+    "Labeled Element", # PeakGroup
     "Animal",
     "Genotype",
-    "Age (weeks)",
     "Sex",
     "Diet",
     "Feeding Status",
     "Treatment",
     "Studies",
     "Infusate",
-    "Tracer Compound"
+    "Tracer(s)",
+    "Tracer Compound(s)"
   )
 
 numericColNames <- c(
-  "Total Abundance",
-  "Enrichment Fraction",
-  "Enrichment Abundance",
-  "Normalized Labeling",
+  "Raw Abundance", # PeakData
+  "Corrected Abundance", # PeakData
+  "Fraction", # PeakData
+  "Median M/Z", # PeakData
+  "Median RT", # PeakData
+  "Total Abundance", # PeakGroup
+  "Enrichment Fraction", # PeakGroup
+  "Enrichment Abundance", # PeakGroup
+  "Normalized Labeling", # PeakGroup
   "Body Weight (g)",
+  "Age (weeks)",
   "Infusion Rate (ul/min/g)",
-  "Average Ra (nM/m/g)",
-  "Average Rd (nM/m/g)",
-  "Average Ra (nM/m)",
-  "Average Rd (nM/m)",
-  "Intact Ra (nM/m/g)",
-  "Intact Rd (nM/m/g)",
-  "Intact Ra (nM/m)",
-  "Intact Rd (nM/m)",
+  "Average Ra (nM/m/g)", # Fcirc
+  "Average Rd (nM/m/g)", # Fcirc
+  "Average Ra (nM/m)", # Fcirc
+  "Average Rd (nM/m)", # Fcirc
+  "Intact Ra (nM/m/g)", # Fcirc
+  "Intact Rd (nM/m/g)", # Fcirc
+  "Intact Ra (nM/m)", # Fcirc
+  "Intact Rd (nM/m)", # Fcirc
   "Tracer Concentration (mM)",
   "Time Collected (m)"
 )
